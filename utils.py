@@ -60,8 +60,6 @@ def load_data(datapath, cache_name, label_name):
     else :
         print("Cache not found, loading images..")
         imgs = load_all_imgs_within_dir(datapath)
-        print("Caching images for future use under " + cache_name)
-        cache(imgs, cache_name)
     
     labels = create_labels(len(imgs), label_name)
     return imgs, labels
