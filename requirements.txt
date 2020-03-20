@@ -6,3 +6,4 @@ keras
 opencv-python
 scikit-learn
 scikit-image
+pandas
