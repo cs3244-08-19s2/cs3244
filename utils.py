@@ -123,8 +123,9 @@ def images_crop_from_centre(images, percentage=0.9):
         H, W, C = images[i].shape
         delta_H_new, delta_W_new = int(H * percentage * 0.5), int(W * percentage * 0.5)
         centre_H, centre_W = int(H/2), int(W/2)
-        cropped_images.append(images[i][centre_H - delta_H_new : centre_H + delta_H_new, 
-                                        centre_W - delta_W_new : centre_W + delta_W_new, :])
+        crop_by = delta_H_new if delta_H_new < delta_W_new else delta_W_new
+        cropped_images.append(images[i][centre_H - crop_by : centre_H + crop_by, 
+                                        centre_W - crop_by : centre_W + crop_by, :])
     return np.asarray(cropped_images)
 
 

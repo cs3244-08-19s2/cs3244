@@ -7,3 +7,5 @@ opencv-python
 scikit-learn
 scikit-image
 pandas
+h5py
+imbalanced-learn
