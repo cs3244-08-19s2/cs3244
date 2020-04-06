@@ -134,6 +134,17 @@ def images_resize(images, dim: (int, int)):
          resized_images.append(cv2.resize(images[i], dim))
     return np.asarray(resized_images).reshape(len(images), dim[0], dim[1], images[0].shape[2])
 
+def images_resize2D(images):
+    resized_images = []
+    for i in range(len(images)):
+         resized_images.append(cv2.resize(images[i], (64,64)))
+    return np.asarray(resized_images).reshape(len(images),12288)
+
+def images_normalize2D(images):
+    normalised_images = []
+    for i in range(len(images)):
+        normalised_images.append(cv2.normalize(images[i], None, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_32F))
+    return np.asarray(normalised_images).reshape(len(images),12288)
 
 def images_normalize(images):
     normalised_images = []

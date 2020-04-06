@@ -1,4 +1,11 @@
 .ipynb_checkpoints/
 __pycache__/
 chest_xray/
+<<<<<<< Updated upstream
 *.model
+||||||| merged common ancestors
+*.hdf5
+=======
+*.hdf5
+PneumoniaDetector_SVM_Hui Ying
+>>>>>>> Stashed changes
