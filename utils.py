@@ -18,8 +18,7 @@ def extract_image_paths(directory: str):
 
     """
     assert os.path.exists(directory)
-
-    dir_separator = "/" if platform.system() == "Windows" else "\\"
+    dir_separator = "/"
     # Find individual image paths
     image_paths = []
     for filename in os.listdir(directory):
