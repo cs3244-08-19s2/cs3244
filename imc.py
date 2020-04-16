@@ -10,8 +10,8 @@ import glob, os
 import utils
 
 
-def build_vocabulary_from_dirs(directory1, directory2, vocab_size):
-    image_paths = utils.extract_image_paths(directory1) +  utils.extract_image_paths(directory2)
+def build_vocabulary_from_dirs(image_paths1, image_paths2, vocab_size):
+    image_paths = image_paths1 +  image_paths2
     return build_vocabulary(image_paths, vocab_size)
 
 def build_vocabulary(image_paths, vocab_size):
@@ -86,10 +86,6 @@ def build_vocabulary(image_paths, vocab_size):
     #############################################################################
 
     return vocab
-
-def bags_of_sifts_from_dir(directory, vocab_filename):
-    image_paths = utils.extract_image_paths(directory)
-    return bags_of_sifts(image_paths, vocab_filename)
 
 def bags_of_sifts(image_paths, vocab_filename):
     """
