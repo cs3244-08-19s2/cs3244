@@ -2,7 +2,6 @@ import numpy as np
 import cyvlfeat as vlfeat
 import pickle
 import math
-import simplified_sift as s_sift
 from scipy.spatial.distance import cdist
 import cv2
 
