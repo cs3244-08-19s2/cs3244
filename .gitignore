@@ -5,3 +5,5 @@ chest_xray/
 ||||||| merged common ancestors
 *.hdf5
 .DS_Store
+*.pkl
+*.pickle

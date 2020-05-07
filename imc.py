@@ -86,7 +86,7 @@ def build_vocabulary(image_paths, vocab_size):
 
     return vocab
 
-def bags_of_sifts(image_paths, vocab_filename):
+def bags_of_sifts(image_paths, vocab_filename, vocab_size):
     """
       You will want to construct SIFT features here in the same way you
       did in build_vocabulary() (except for possibly changing the sampling
@@ -151,7 +151,7 @@ def bags_of_sifts(image_paths, vocab_filename):
         # Create histogram
         dist = cdist(descriptors, vocab, 'euclidean')
         bin_assignment = np.argmin(dist, axis=1) 
-        image_feats = np.zeros(200)
+        image_feats = np.zeros(vocab_size)
         for id_assign in bin_assignment:
             image_feats[id_assign] += 1
         
