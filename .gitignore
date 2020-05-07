@@ -1,4 +1,9 @@
 .ipynb_checkpoints/
 __pycache__/
 chest_xray/
+*.model
+||||||| merged common ancestors
 *.hdf5
+.DS_Store
+*.pkl
+*.pickle
